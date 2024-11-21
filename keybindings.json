@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 [
   // ================== Navigation ==================
   {
@@ -16,6 +17,7 @@
     "command": "workbench.action.navigateRight",
     "key": "ctrl-l"
   },
+// ================== Toggle Sidebar ==================
   {
     "args": {
       "commands": [
@@ -67,11 +69,11 @@
   // ================== Toggle Panels ==================
   {
     "command": "workbench.action.togglePanel",
-    "key": "space l",
+    "key": "space t",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space t",
+    "key": "space l",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
@@ -246,6 +248,23 @@
     "key": "ctrl+l",
     "when": "suggestWidgetVisible"
   },
+ // ================== Quick Open Widget ==================
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.acceptSelectedQuickOpenItem",
+    "when": "inQuickOpen"
+  },
+ // ================== Emmet Widget ==================
   {
     "command": "editor.emmet.action.incrementNumberByOne",
     "key": "ctrl+a",
@@ -262,6 +281,7 @@
     "key": "space z m",
     "when": "vim.mode == 'Normal' && editorTextFocus || !inputFocus"
   },
+ // ================== Random ==================
   {
     "command": "-editor.action.selectFromAnchorToCursor",
     "key": "cmd+k cmd+k",
@@ -272,15 +292,50 @@
     "key": "cmd+k cmd+k",
     "when": "resource == 'vscode-userdata:/Users/ethereum/Library/Application%20Support/Code/User/keybindings.json'"
   },
+// ================== Harpoon ==================
   {
-    "command": "leap.findForward",
-    "key": "space f f",
-    "when": "vim.mode == 'Normal'"
+    "command": "vscode-harpoon.addEditor",
+    "key": "space h a",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+
+  {
+    "command": "vscode-harpoon.editEditors",
+    "key": "space h e",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "command": "leap.findBackward",
-    "key": "space f b",
-    "when": "vim.mode == 'Normal'"
-  }
-]
+    "command": "vscode-harpoon.editorQuickPick",
+    "key": "space h h",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "commadn": "vscode-harpoon.gotoNextHarpoonEditor",
+    "key": "space h n",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "vscode-harpoon.gotoPreviousHarpoonEditor",
+    "key": "space h p",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
 
+// Favorite
+// ================== Bookmarks ==================
+  {
+  "command": "bookmarks.toggle",
+  "key": "space m",
+  "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+},
+{
+  "command": "bookmarks.list",
+  "key": "space b",
+  "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+},
+// ================== Project Manager ==================
+{
+  "command": "projectManager.listProjects",
+  "key": "space p",
+  "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+}
+]
