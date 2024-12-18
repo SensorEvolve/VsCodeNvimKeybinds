@@ -1,0 +1,247 @@
+// Place your key bindings in this file to override the defaults
+[
+  // ================== Navigation ==================
+  {
+    "command": "workbench.action.navigateLeft",
+    "key": "ctrl-h"
+  },
+  {
+    "command": "workbench.action.navigateDown",
+    "key": "ctrl-j"
+  },
+  {
+    "command": "workbench.action.navigateUp",
+    "key": "ctrl-k"
+  },
+  {
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl-l"
+  },
+
+  //Dont forget to tell bros about gt-nextEditor and gT-previousEditor
+  {
+    "args": {
+      "after": ["$"]
+    },
+    "command": "vim.remap",
+    "key": "shift+4",
+    "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+  },
+
+  // Move lines
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift+j",
+    "when": "(vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift+k",
+    "when": "(vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  // Add Selection
+  {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl-n",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  // ================== File Explorer ==================
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.copy",
+    "key": "c",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.cut",
+    "key": "x",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "a",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "explorer.newFolder",
+    "key": "shift-a",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+  },
+  // ================== Find in Files ==================
+  {
+    "command": "workbench.action.quickOpenNavigateNext",
+    "key": "ctrl+j",
+    "when": "inQuickOpen"
+  },
+  {
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "key": "ctrl+k",
+    "when": "inQuickOpen"
+  },
+  // ================== Suggestion Widget ==================
+  {
+    "command": "selectNextSuggestion",
+    "key": "ctrl+j",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "command": "selectPrevSuggestion",
+    "key": "ctrl+k",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "command": "acceptSelectedSuggestion",
+    "key": "ctrl+l",
+    "when": "suggestWidgetVisible"
+  },
+  // ================== Quick Open Widget ==================
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.acceptSelectedQuickOpenItem",
+    "when": "inQuickOpen"
+  },
+  // ================== Emmet Widget ==================
+  {
+    "command": "editor.emmet.action.incrementNumberByOne",
+    "key": "ctrl+a",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.emmet.action.decrementNumberByOne",
+    "key": "ctrl+x",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ================== Codeium ==================
+  {
+    "command": "editor.action.inlineSuggest.showNext",
+    "key": "ctrl+n",
+    "when": "vim.mode == 'Insert' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.inlineSuggest.showPrevious",
+    "key": "ctrl+p",
+    "when": "vim.mode == 'Insert' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.inlineSuggest.commit",
+    "key": "ctrl+l",
+    "when": "vim.mode == 'Insert' && editorTextFocus"
+  },
+
+  // ================== Random ==================
+  {
+    "command": "-editor.action.selectFromAnchorToCursor",
+    "key": "cmd+k cmd+k",
+    "when": "editorTextFocus && selectionAnchorSet"
+  },
+  {
+    "command": "-editor.action.defineKeybinding",
+    "key": "cmd+k cmd+k",
+    "when": "resource == 'vscode-userdata:/Users/ethereum/Library/Application%20Support/Code/User/keybindings.json'"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+[Equal]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-chatEditing.saveAllFiles",
+    "when": "hasUndecidedChatEditingResource && inChatInput && !chatSessionRequestInProgress && chatLocation == 'editing-session'"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "cmd+s",
+    "command": "saveAll"
+  },
+  {
+    "key": "alt+cmd+s",
+    "command": "-saveAll"
+  }
+]
